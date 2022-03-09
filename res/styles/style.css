@@ -1,0 +1,22 @@
+.hover{
+    transition: 300ms;
+}
+.hover:hover{
+    filter: brightness(0.9);
+}
+#spell-input{
+    position: absolute;
+    opacity: 0;
+    height: 100%;
+    border: none;
+}
+#spell-input:focus{
+    opacity: 0.2;
+}
+#display-input{
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    pointer-events: none;
+    outline: 1px solid #2222;
+}
