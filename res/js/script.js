@@ -58,7 +58,11 @@ spell_input.addEventListener('keyup', () => {
         c--;
         return `<span style="color:${g ? "#0f0" : "#f00"}">${letter}</span>`
     }).join('')
-    display_input.innerHTML = text
+
+    let diff = currentWord.length - spell_input.value.length
+    if (diff < 0) diff = 0
+
+    display_input.innerHTML = text + "_ ".repeat(diff)
 
     if (spell_input.value === currentWord) nextWord()
 })
